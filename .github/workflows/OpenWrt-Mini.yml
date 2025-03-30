@@ -2,12 +2,10 @@ name: OpenWrt Mini
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: 0 20 * * *
 
 env:
-  REPO_URL: https://github.com/xiaomeng9597/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/ylls520/coolsnowwolf-lede
+  REPO_BRANCH: nsy
   CONFIG_FILE: configs/armv8-mini.config
   DIY_SCRIPT: diy-mini.sh
   CLASH_KERNEL: arm64
