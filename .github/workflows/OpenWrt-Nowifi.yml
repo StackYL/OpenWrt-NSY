@@ -106,7 +106,6 @@ jobs:
       run: |
         df -hT
         cp $CONFIG_FILE $OPENWRT_PATH/.config
-        cp configfiles/dts/rk3568-nsy-g68-plus-nowifi.dts $OPENWRT_PATH/target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3568-nsy-g68-plus.dts
         cd $OPENWRT_PATH
         make defconfig > /dev/null 2>&1
         SOURCE_REPO="$(echo $REPO_URL | awk -F '/' '{print $(NF)}')"
