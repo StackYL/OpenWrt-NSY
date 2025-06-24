@@ -89,6 +89,7 @@ jobs:
         df -hT
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
+        git reset --hard a12f94c7f500b49ea5f1723442f337e071ecd743
         echo "OPENWRT_PATH=$PWD" >> $GITHUB_ENV
         COMMIT_AUTHOR=$(git show -s --date=short --format="作者: %an")
         echo "COMMIT_AUTHOR=$COMMIT_AUTHOR" >> $GITHUB_ENV
