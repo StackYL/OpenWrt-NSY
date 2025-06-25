@@ -202,6 +202,9 @@ tar -xvf rtl8367b.tar.gz
 git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 # 集客ac
 git clone https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac
+# 测速
+rm -rf  ./feedspackages/net/speedtest-cli   #删除原来老版本
+git clone https://github.com/sirpdboy/luci-app-netspeedtest package/netspeedtest
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
